@@ -1,21 +1,20 @@
-﻿<local:MainViewModel 
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+﻿<local:MainViewModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:RottenTomatoes" 
+    xmlns:local="clr-namespace:RottenTomatoes"
     SampleProperty="Sample Text Property Value">
-    
+
     <local:MainViewModel.Movies>
-        <local:MovieViewModel LineOne="Box Office" LineTwo="Box Office Movies"/>
-        <local:MovieViewModel LineOne="In Theatres" LineTwo="Movies currently in theatres"/>
-        <local:MovieViewModel LineOne="Opening Movies" LineTwo="Current opening movies"/>
-        <local:MovieViewModel LineOne="Coming Soon" LineTwo="Upcoming movies"/>
+        <local:MovieViewModel LineOne="Box Office" LineTwo="Box Office Movies" />
+        <local:MovieViewModel LineOne="In Theatres" LineTwo="Movies currently in theatres" />
+        <local:MovieViewModel LineOne="Opening Movies" LineTwo="Current opening movies" />
+        <local:MovieViewModel LineOne="Coming Soon" LineTwo="Upcoming movies" />
     </local:MainViewModel.Movies>
-    
+
     <local:MainViewModel.DVD>
-        <local:MovieViewModel LineOne = "Top Rentals" LineTwo = "Current top dvd rentals"/>
-        <local:MovieViewModel LineOne = "Release DVDs" LineTwo = "Current release DVDs"/>
-        <local:MovieViewModel LineOne = "New Release" LineTwo = "New release DVDs"/>
+        <local:MovieViewModel LineOne = "Top Rentals" LineTwo = "Current top dvd rentals" />
+        <local:MovieViewModel LineOne = "Release DVDs" LineTwo = "Current release DVDs" />
+        <local:MovieViewModel LineOne = "New Release" LineTwo = "New release DVDs" />
         <local:MovieViewModel LineOne = "Upcoming DVDs" LineTwo = "Upcoming release DVDs" />
     </local:MainViewModel.DVD>
-    
 </local:MainViewModel>

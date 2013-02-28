@@ -1,18 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Collections.ObjectModel;
-
+using System.ComponentModel;
 
 namespace RottenTomatoes
 {
@@ -32,6 +20,7 @@ namespace RottenTomatoes
         public ObservableCollection<LandingPageViewModel> DVD { get; private set; }
 
         private string _sampleProperty = "Sample Runtime Property Value";
+
         /// <summary>
         /// Sample ViewModel property; this property is used in the view to display its value using a Binding
         /// </summary>
@@ -64,10 +53,10 @@ namespace RottenTomatoes
         public void LoadData()
         {
             // Sample data; replace with real data
-            this.Movies.Add(new LandingPageViewModel() { LineOne="Box Office", LineTwo = "Box Office Movies"});
-            this.Movies.Add(new LandingPageViewModel() { LineOne="In Theatres", LineTwo="Movies currently in theatres" });
-            this.Movies.Add(new LandingPageViewModel() { LineOne="Opening Movies", LineTwo="Current opening movies" });
-            this.Movies.Add(new LandingPageViewModel() { LineOne="Coming Soon", LineTwo="Upcoming movies"});
+            this.Movies.Add(new LandingPageViewModel() { LineOne = "Box Office", LineTwo = "Box Office Movies" });
+            this.Movies.Add(new LandingPageViewModel() { LineOne = "In Theatres", LineTwo = "Movies currently in theatres" });
+            this.Movies.Add(new LandingPageViewModel() { LineOne = "Opening Movies", LineTwo = "Current opening movies" });
+            this.Movies.Add(new LandingPageViewModel() { LineOne = "Coming Soon", LineTwo = "Upcoming movies" });
 
             this.IsDataLoaded = true;
         }
@@ -81,6 +70,7 @@ namespace RottenTomatoes
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         private void NotifyPropertyChanged(String propertyName)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
