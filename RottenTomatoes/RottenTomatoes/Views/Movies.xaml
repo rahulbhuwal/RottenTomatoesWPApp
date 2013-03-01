@@ -16,7 +16,7 @@
 	<phone:PhoneApplicationPage.Resources>
 		<DataTemplate x:Key="DataTemplate">
 			<StackPanel Orientation="Horizontal" Margin="0,0,0,17">
-                <Image Name="ratingIcon" Source="/Images/icons-v2.png"/>
+                <Image Name="ratingIcon" Source="{Binding RatingTomato}" />
                 <TextBlock Name="ratingPercent" Text="{Binding RatingPercentage}"/>
                 <TextBlock Name="movieName" Text="{Binding MovieName}" Margin="10,0,0,0"/>
 			</StackPanel>

@@ -44,7 +44,11 @@ namespace RottenTomatoes.Views
                 MovieListView listItem = new MovieListView();
                 if (movie.ratings.critics_rating == "Certified Fresh")
                 {
-                    listItem.RatingTomato = "icons-v2.png";
+                    listItem.RatingTomato = "/RottenTomatoes;component/Images/icons-v2.png";
+                }
+                else
+                {
+                    listItem.RatingTomato = "/RottenTomatoes;component/Images/icons-v2.png";
                 }
                 //listItem.RatingTomato = movie.ratings.critics_rating;
                 listItem.RatingPercentage = movie.ratings.critics_score;
