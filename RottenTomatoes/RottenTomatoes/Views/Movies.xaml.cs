@@ -3,10 +3,9 @@ using Microsoft.Phone.Reactive;
 using Newtonsoft.Json;
 using System.Net;
 using System.Collections.Generic;
-using System;
-using RottenTomatoes.JSONSerializer;
 using RottenTomatoes.JSONSerializer.KnownMovies;
 using RottenTomatoes.JSONSerializer.UpcomingMovies;
+using System.Windows;
 
 namespace RottenTomatoes.Views
 {
@@ -15,26 +14,26 @@ namespace RottenTomatoes.Views
         public Movies()
         {
             InitializeComponent();
+            DataContext = App.BOViewModel;
+            this.Loaded += new System.Windows.RoutedEventHandler(MoviesPage_Loaded);
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             string option = this.NavigationContext.QueryString["option"];
-            var w = new WebClient();
 
             if (option == "Box Office")
             {
-                LoadBoxOfficeMovies();
+                MoviesPivot.SelectedIndex = 0;
             }
             else if (option == "Opening Movies")
             {
-                LoadOpeningMovies();
+                MoviesPivot.SelectedIndex = 1;
             }
-            else if(option == "Coming Soon")
+            else if (option == "Coming Soon")
             {
-                LoadComingSoonMovies();
+                MoviesPivot.SelectedIndex = 2;
             }
-            
         }
 
         public void LoadBoxOfficeMovies()
@@ -135,7 +134,7 @@ namespace RottenTomatoes.Views
         {
             if (MoviesPivot.SelectedIndex == 0)
             {
-                LoadBoxOfficeMovies();
+                MovieList.ItemsSource = App.BOViewModel.BoxOfficeMovies;
             }
             else if (MoviesPivot.SelectedIndex == 1)
             {
@@ -152,6 +151,18 @@ namespace RottenTomatoes.Views
 
         }
 
+        private void LoadControls()
+        { 
+
+        }
+
+        private void MoviesPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!App.BOViewModel.IsDataLoaded)
+            {
+                App.BOViewModel.LoadBoxOfficeMovies();
+            }
+        }
     }
 
     public class MovieListView

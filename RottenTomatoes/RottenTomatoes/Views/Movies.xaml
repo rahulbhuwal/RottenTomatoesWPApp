@@ -30,7 +30,7 @@
         <controls:Pivot Title="Movies" Name="MoviesPivot" SelectionChanged="MoviesPivot_SelectionChanged">
             <!--Pivot item one-->
             <controls:PivotItem Header="BoxOffice">
-            	<ListBox Name="MovieList" Margin="0,0, -12, 0" ItemTemplate="{StaticResource DataTemplate}" SelectionChanged="MovieList_SelectionChanged">
+                <ListBox Name="MovieList" Margin="0,0, -12, 0" ItemTemplate="{StaticResource DataTemplate}" SelectionChanged="MovieList_SelectionChanged">
             	</ListBox>
             </controls:PivotItem>
 

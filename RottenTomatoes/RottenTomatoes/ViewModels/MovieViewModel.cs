@@ -14,53 +14,69 @@ namespace RottenTomatoes
 {
     public class MovieViewModel : INotifyPropertyChanged
     {
+        public string ratingTomato;
         public string RatingTomato
         {
-            get;
+            get
+            {
+                return ratingTomato;
+            }
             set
             {
-                if (value != this.RatingTomato)
+                if (value != ratingTomato)
                 {
-                    this.RatingTomato = value;
+                    ratingTomato = value;
                     NotifyPropertyChanged("RatingTomato");
                 }
             }
         }
 
+        public int ratingPercentage;
         public int RatingPercentage
         {
-            get;
+            get
+            {
+                return ratingPercentage;
+            }
             set
             {
-                if (value != this.RatingPercentage)
+                if (value != ratingPercentage)
                 {
-                    this.RatingPercentage = value;
+                    ratingPercentage = value;
                     NotifyPropertyChanged("RatingPercentage");
                 }
             }
         }
 
+        public string movieName;
         public string MovieName
         {
-            get;
+            get
+            {
+                return movieName;
+            }
             set
             {
-                if (value != this.MovieName)
+                if (value != movieName)
                 {
-                    this.MovieName = value;
+                    movieName = value;
                     NotifyPropertyChanged("MovieName");
                 }
             }
         }
 
+        public string releaseDate;
         public string ReleaseDate
         {
-            get;
+            get
+            {
+                return releaseDate;
+            }
             set
             {
-                if (value != this.ReleaseDate)
+                if (value != releaseDate)
                 {
-                    this.ReleaseDate = value;
+                    releaseDate = value;
                     NotifyPropertyChanged("ReleaseDate");
                 }
             }
