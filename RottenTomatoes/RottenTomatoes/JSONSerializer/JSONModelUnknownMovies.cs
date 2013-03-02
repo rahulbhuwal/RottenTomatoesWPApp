@@ -10,7 +10,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
 
-namespace RottenTomatoes
+namespace RottenTomatoes.JSONSerializer.UpcomingMovies
 {
     public class ReleaseDates
     {
@@ -22,7 +22,6 @@ namespace RottenTomatoes
     {
         public string critics_rating { get; set; }
         public int critics_score { get; set; }
-        public string audience_rating { get; set; }
         public int audience_score { get; set; }
     }
 
@@ -62,8 +61,7 @@ namespace RottenTomatoes
         public string title { get; set; }
         public int year { get; set; }
         public string mpaa_rating { get; set; }
-        public int runtime { get; set; }
-        public string critics_consensus { get; set; }
+        public object runtime { get; set; }
         public ReleaseDates release_dates { get; set; }
         public Ratings ratings { get; set; }
         public string synopsis { get; set; }
@@ -76,13 +74,16 @@ namespace RottenTomatoes
     public class Links2
     {
         public string self { get; set; }
+        public string next { get; set; }
         public string alternate { get; set; }
     }
 
-    public class RottenTomatoMovies
+    public class ComingSoonMovies
     {
+        public int total { get; set; }
         public List<Movie> movies { get; set; }
         public Links2 links { get; set; }
         public string link_template { get; set; }
     }
+
 }

@@ -50,11 +50,11 @@ namespace RottenTomatoes
         /// <summary>
         /// Creates and adds a few ItemViewModel objects into the Items collection.
         /// </summary>
-        public void LoadData()
+        public void LoadMovies()
         {
             // Sample data; replace with real data
             this.Movies.Add(new LandingPageViewModel() { LineOne = "Box Office", LineTwo = "Box Office Movies" });
-            this.Movies.Add(new LandingPageViewModel() { LineOne = "In Theatres", LineTwo = "Movies currently in theatres" });
+            //this.Movies.Add(new LandingPageViewModel() { LineOne = "In Theatres", LineTwo = "Movies currently in theatres" });
             this.Movies.Add(new LandingPageViewModel() { LineOne = "Opening Movies", LineTwo = "Current opening movies" });
             this.Movies.Add(new LandingPageViewModel() { LineOne = "Coming Soon", LineTwo = "Upcoming movies" });
 

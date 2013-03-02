@@ -70,7 +70,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BoxOfficeJsonModel.cs" />
+    <Compile Include="JSONSerializer\JsonModelKnownMovies.cs" />
+    <Compile Include="JSONSerializer\JSONModelUnknownMovies.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -114,7 +115,9 @@
     </Content>
     <Resource Include="PanoramaBackground.png" />
     <Resource Include="Images\DSC_0718.JPG" />
-    <Resource Include="Images\icons-v2.png" />
+    <Resource Include="Images\Rotten.png" />
+    <Resource Include="Images\CertifiedFresh.png" />
+    <Resource Include="Images\UnkonownRating.png" />
     <Content Include="red-o-splashBCK.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

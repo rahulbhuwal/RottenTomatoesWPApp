@@ -1,19 +1,22 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace RottenTomatoes
 {
     public class BoxOfficeViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public ObservableCollection<MovieViewModel> Movies { get; private set; }
 
-        private void NotifyPropertyChanged(String propertyName)
+        public BoxOfficeViewModel()
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (null != handler)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            this.Movies = new ObservableCollection<MovieViewModel>();
+        }
+
+        public bool IsDataLoaded
+        {
+            get;
+            private set;
         }
     }
 }

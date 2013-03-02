@@ -22,7 +22,7 @@ namespace RottenTomatoes
         {
             if (!App.ViewModel.IsDataLoaded)
             {
-                App.ViewModel.LoadData();
+                App.ViewModel.LoadMovies();
                 App.ViewModel.LoadDVD();
             }
         }
@@ -41,6 +41,11 @@ namespace RottenTomatoes
         {
             MoviesLanding.SelectedIndex = -1;
             MoviesLanding.SelectedItem = null;
+        }
+
+        private void DVDLanding_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

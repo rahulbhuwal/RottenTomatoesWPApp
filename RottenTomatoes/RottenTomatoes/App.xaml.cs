@@ -8,6 +8,7 @@ namespace RottenTomatoes
     public partial class App : Application
     {
         private static MainViewModel viewModel = null;
+        private static BoxOfficeViewModel boViewModel = null;
 
         /// <summary>
         /// A static ViewModel used by the views to bind against.
@@ -22,6 +23,19 @@ namespace RottenTomatoes
                     viewModel = new MainViewModel();
 
                 return viewModel;
+            }
+        }
+
+        public static BoxOfficeViewModel BOViewModel
+        {
+            get
+            {
+                if (boViewModel == null)
+                {
+                    boViewModel = new BoxOfficeViewModel();
+                }
+
+                return boViewModel;
             }
         }
 
@@ -79,7 +93,7 @@ namespace RottenTomatoes
             // Ensure that application state is restored appropriately
             if (!App.ViewModel.IsDataLoaded)
             {
-                App.ViewModel.LoadData();
+                App.ViewModel.LoadMovies();
             }
         }
 

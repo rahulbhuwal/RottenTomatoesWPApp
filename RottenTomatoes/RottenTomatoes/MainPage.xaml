@@ -43,7 +43,7 @@
             <!--Use 'Orientation="Horizontal"' to enable a panel that lays out horizontally-->
             <controls:PanoramaItem Header="DVD">
                 <!--Double line list with image placeholder and text wrapping-->
-                <ListBox Margin="0,0,-12,0" Name="DVDLanding" ItemsSource="{Binding DVD}">
+                <ListBox Margin="0,0,-12,0" Name="DVDLanding" ItemsSource="{Binding DVD}" SelectionChanged="DVDLanding_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,17">
